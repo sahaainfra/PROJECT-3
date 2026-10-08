@@ -1,0 +1,131 @@
+part_id,coverage_observed,identified_reusable_artifacts,missing_capabilities,implementation_guidance,risk_assessment
+003,0% located,Next lint typecheck test build scripts,Part-specific capability not in existing ERP foundation,NEW only after reading Part 003 prompt and passing Part 00 gate; do not infer requirements from this row,Unassessed
+004,0% located,Prisma client and Next.js server components,Shared services/jobs not present,NEW or EXTEND after reading Part 004 prompt and passing Part 00 gate,Unassessed
+005,0% located,Company/project membership source declarations,Part-specific capability not located,NEW or EXTEND after reading Part 005 prompt and passing Part 00 gate,Unassessed
+006,0% located,Coarse company roles and project membership guards,Central RBAC/ABAC/SoD/permission registry not present,NEW or EXTEND after reading Part 006 prompt and passing Part 00 gate,Unassessed
+007,0% located,Authentication AuditEvent writes only,Enterprise audit engine/complete business ledger not present,NEW or EXTEND after reading Part 007 prompt and passing Part 00 gate,Unassessed
+008,0% located,Next.js App Router server request handling,Part-specific capability not located,NEW or EXTEND after reading Part 008 prompt and passing Part 00 gate,Unassessed
+009,0% located,JWT user active-status check,Identity/SoD capability beyond basic user status not present,NEW or EXTEND after reading Part 009 prompt and passing Part 00 gate,Unassessed
+010,0% located,No telemetry implementation found,Shared error taxonomy/telemetry not present,NEW after reading Part 010 prompt and passing Part 00 gate,Unassessed
+011,0% located,No event bus/outbox found,Shared event contracts and delivery not present,NEW after reading Part 011 prompt and passing Part 00 gate,Unassessed
+012,0% located,No workflow engine found,Approvals/delegation/escalation/SLA not present,NEW after reading Part 012 prompt and passing Part 00 gate,Unassessed
+013,0% located,No workflow/rules engine found,Configurable rules not present,NEW after reading Part 013 prompt and passing Part 00 gate,Unassessed
+014,0% located,No protocol engine/control ledger found,Protocol checks/exceptions/escalation not present,NEW after reading Part 014 prompt and passing Part 00 gate,Unassessed
+015,0% located,Responsive global CSS and shared workspace shell,Enterprise design-system package/catalogue not present,EXTEND after reading Part 015 prompt and passing Part 00 gate,Unassessed
+016,0% located,No offline/sync workflow found,Part-specific capability not located,NEW or EXTEND after reading Part 016 prompt and passing Part 00 gate,Unassessed
+017,0% located,No Part 017 module artifacts located,Part-specific capability not located,NEW only after reading Part 017 prompt and passing Part 00 gate,Unassessed
+018,0% located,No Part 018 module artifacts located,Part-specific capability not located,NEW only after reading Part 018 prompt and passing Part 00 gate,Unassessed
+019,0% located,Lucide React icons and global CSS,Shared component design system not present,EXTEND after reading Part 019 prompt and passing Part 00 gate,Unassessed
+020,0% located,No Part 020 module artifacts located,Part-specific capability not located,NEW only after reading Part 020 prompt and passing Part 00 gate,Unassessed
+021,0% located,No Part 021 module artifacts located,Part-specific capability not located,NEW only after reading Part 021 prompt and passing Part 00 gate,Unassessed
+022,0% located,No Part 022 module artifacts located,Part-specific capability not located,NEW only after reading Part 022 prompt and passing Part 00 gate,Unassessed
+023,0% located,No Part 023 module artifacts located,Part-specific capability not located,NEW only after reading Part 023 prompt and passing Part 00 gate,Unassessed
+024,0% located,No Part 024 module artifacts located,Part-specific capability not located,NEW only after reading Part 024 prompt and passing Part 00 gate,Unassessed
+025,0% located,No Part 025 module artifacts located,Part-specific capability not located,NEW only after reading Part 025 prompt and passing Part 00 gate,Unassessed
+026,0% located,No Part 026 module artifacts located,Part-specific capability not located,NEW only after reading Part 026 prompt and passing Part 00 gate,Unassessed
+027,0% located,No alert engine or schedules found,Part-specific capability not located,NEW only after reading Part 027 prompt and passing Part 00 gate,Unassessed
+028,0% located,No alert engine or schedules found,Part-specific capability not located,NEW only after reading Part 028 prompt and passing Part 00 gate,Unassessed
+029,0% located,No Part 029 module artifacts located,Part-specific capability not located,NEW only after reading Part 029 prompt and passing Part 00 gate,Unassessed
+030,0% located,No Part 030 module artifacts located,Part-specific capability not located,NEW only after reading Part 030 prompt and passing Part 00 gate,Unassessed
+031,0% located,No Part 031 module artifacts located,Part-specific capability not located,NEW only after reading Part 031 prompt and passing Part 00 gate,Unassessed
+032,0% located,No Part 032 module artifacts located,Part-specific capability not located,NEW only after reading Part 032 prompt and passing Part 00 gate,Unassessed
+033,0% located,No Part 033 module artifacts located,Part-specific capability not located,NEW only after reading Part 033 prompt and passing Part 00 gate,Unassessed
+034,0% located,No Part 034 module artifacts located,Part-specific capability not located,NEW only after reading Part 034 prompt and passing Part 00 gate,Unassessed
+035,0% located,No authoritative calculation engine found,Money/quantity formula registry and golden tests not present,NEW only after reading Part 035 prompt and passing Part 00 gate,Unassessed
+036,0% located,Company and Project platform declarations only,Construction item/catalogue masters not present,NEW only after reading Part 036 prompt and passing Part 00 gate,Unassessed
+037,0% located,No Part 037 module artifacts located,Part-specific capability not located,NEW only after reading Part 037 prompt and passing Part 00 gate,Unassessed
+038,0% located,No Part 038 module artifacts located,Part-specific capability not located,NEW only after reading Part 038 prompt and passing Part 00 gate,Unassessed
+039,0% located,No finance/posting models or services found,Part-specific finance capability not located,NEW only after reading Part 039 prompt and passing Part 00 gate,Unassessed
+040,0% located,No Part 040 module artifacts located,Part-specific capability not located,NEW only after reading Part 040 prompt and passing Part 00 gate,Unassessed
+041,0% located,No Part 041 module artifacts located,Part-specific capability not located,NEW only after reading Part 041 prompt and passing Part 00 gate,Unassessed
+042,0% located,No Part 042 module artifacts located,Part-specific capability not located,NEW only after reading Part 042 prompt and passing Part 00 gate,Unassessed
+043,0% located,No Part 043 module artifacts located,Part-specific capability not located,NEW only after reading Part 043 prompt and passing Part 00 gate,Unassessed
+044,0% located,No Part 044 module artifacts located,Part-specific capability not located,NEW only after reading Part 044 prompt and passing Part 00 gate,Unassessed
+045,0% located,No Part 045 module artifacts located,Part-specific capability not located,NEW only after reading Part 045 prompt and passing Part 00 gate,Unassessed
+046,0% located,No Part 046 module artifacts located,Part-specific capability not located,NEW only after reading Part 046 prompt and passing Part 00 gate,Unassessed
+047,0% located,No Part 047 module artifacts located,Part-specific capability not located,NEW only after reading Part 047 prompt and passing Part 00 gate,Unassessed
+048,0% located,No Part 048 module artifacts located,Part-specific capability not located,NEW only after reading Part 048 prompt and passing Part 00 gate,Unassessed
+049,0% located,No Part 049 module artifacts located,Part-specific capability not located,NEW only after reading Part 049 prompt and passing Part 00 gate,Unassessed
+050,0% located,No Part 050 module artifacts located,Part-specific capability not located,NEW only after reading Part 050 prompt and passing Part 00 gate,Unassessed
+051,0% located,No Part 051 module artifacts located,Part-specific capability not located,NEW only after reading Part 051 prompt and passing Part 00 gate,Unassessed
+052,0% located,No Part 052 module artifacts located,Part-specific capability not located,NEW only after reading Part 052 prompt and passing Part 00 gate,Unassessed
+053,0% located,No Part 053 module artifacts located,Part-specific capability not located,NEW only after reading Part 053 prompt and passing Part 00 gate,Unassessed
+054,0% located,No Part 054 module artifacts located,Part-specific capability not located,NEW only after reading Part 054 prompt and passing Part 00 gate,Unassessed
+055,0% located,No Part 055 module artifacts located,Part-specific capability not located,NEW only after reading Part 055 prompt and passing Part 00 gate,Unassessed
+056,0% located,No Part 056 module artifacts located,Part-specific capability not located,NEW only after reading Part 056 prompt and passing Part 00 gate,Unassessed
+057,0% located,No Part 057 module artifacts located,Part-specific capability not located,NEW only after reading Part 057 prompt and passing Part 00 gate,Unassessed
+058,0% located,No Part 058 module artifacts located,Part-specific capability not located,NEW only after reading Part 058 prompt and passing Part 00 gate,Unassessed
+059,0% located,No Part 059 module artifacts located,Part-specific capability not located,NEW only after reading Part 059 prompt and passing Part 00 gate,Unassessed
+060,0% located,No Part 060 module artifacts located,Part-specific capability not located,NEW only after reading Part 060 prompt and passing Part 00 gate,Unassessed
+061,0% located,No Part 061 module artifacts located,Part-specific capability not located,NEW only after reading Part 061 prompt and passing Part 00 gate,Unassessed
+062,0% located,No Part 062 module artifacts located,Part-specific capability not located,NEW only after reading Part 062 prompt and passing Part 00 gate,Unassessed
+063,0% located,No Part 063 module artifacts located,Part-specific capability not located,NEW only after reading Part 063 prompt and passing Part 00 gate,Unassessed
+064,0% located,No Part 064 module artifacts located,Part-specific capability not located,NEW only after reading Part 064 prompt and passing Part 00 gate,Unassessed
+065,0% located,No Part 065 module artifacts located,Part-specific capability not located,NEW only after reading Part 065 prompt and passing Part 00 gate,Unassessed
+066,0% located,No Part 066 module artifacts located,Part-specific capability not located,NEW only after reading Part 066 prompt and passing Part 00 gate,Unassessed
+067,0% located,No Part 067 module artifacts located,Part-specific capability not located,NEW only after reading Part 067 prompt and passing Part 00 gate,Unassessed
+068,0% located,No Part 068 module artifacts located,Part-specific capability not located,NEW only after reading Part 068 prompt and passing Part 00 gate,Unassessed
+069,0% located,No Part 069 module artifacts located,Part-specific capability not located,NEW only after reading Part 069 prompt and passing Part 00 gate,Unassessed
+070,0% located,No Part 070 module artifacts located,Part-specific capability not located,NEW only after reading Part 070 prompt and passing Part 00 gate,Unassessed
+071,0% located,No Part 071 module artifacts located,Part-specific capability not located,NEW only after reading Part 071 prompt and passing Part 00 gate,Unassessed
+072,0% located,No Part 072 module artifacts located,Part-specific capability not located,NEW only after reading Part 072 prompt and passing Part 00 gate,Unassessed
+073,0% located,No Part 073 module artifacts located,Part-specific capability not located,NEW only after reading Part 073 prompt and passing Part 00 gate,Unassessed
+074,0% located,No Part 074 module artifacts located,Part-specific capability not located,NEW only after reading Part 074 prompt and passing Part 00 gate,Unassessed
+075,0% located,No Part 075 module artifacts located,Part-specific capability not located,NEW only after reading Part 075 prompt and passing Part 00 gate,Unassessed
+076,0% located,No Part 076 module artifacts located,Part-specific capability not located,NEW only after reading Part 076 prompt and passing Part 00 gate,Unassessed
+077,0% located,No Part 077 module artifacts located,Part-specific capability not located,NEW only after reading Part 077 prompt and passing Part 00 gate,Unassessed
+078,0% located,No Part 078 module artifacts located,Part-specific capability not located,NEW only after reading Part 078 prompt and passing Part 00 gate,Unassessed
+079,0% located,No Part 079 module artifacts located,Part-specific capability not located,NEW only after reading Part 079 prompt and passing Part 00 gate,Unassessed
+080,0% located,No Part 080 module artifacts located,Part-specific capability not located,NEW only after reading Part 080 prompt and passing Part 00 gate,Unassessed
+081,0% located,No Part 081 module artifacts located,Part-specific capability not located,NEW only after reading Part 081 prompt and passing Part 00 gate,Unassessed
+082,0% located,No Part 082 module artifacts located,Part-specific capability not located,NEW only after reading Part 082 prompt and passing Part 00 gate,Unassessed
+083,0% located,No Part 083 module artifacts located,Part-specific capability not located,NEW only after reading Part 083 prompt and passing Part 00 gate,Unassessed
+084,0% located,No Part 084 module artifacts located,Part-specific capability not located,NEW only after reading Part 084 prompt and passing Part 00 gate,Unassessed
+085,0% located,No Part 085 module artifacts located,Part-specific capability not located,NEW only after reading Part 085 prompt and passing Part 00 gate,Unassessed
+086,0% located,No Part 086 module artifacts located,Part-specific capability not located,NEW only after reading Part 086 prompt and passing Part 00 gate,Unassessed
+087,0% located,No Part 087 module artifacts located,Part-specific capability not located,NEW only after reading Part 087 prompt and passing Part 00 gate,Unassessed
+088,0% located,No Part 088 module artifacts located,Part-specific capability not located,NEW only after reading Part 088 prompt and passing Part 00 gate,Unassessed
+089,0% located,No Part 089 module artifacts located,Part-specific capability not located,NEW only after reading Part 089 prompt and passing Part 00 gate,Unassessed
+090,0% located,No Part 090 module artifacts located,Part-specific capability not located,NEW only after reading Part 090 prompt and passing Part 00 gate,Unassessed
+091,0% located,No Part 091 module artifacts located,Part-specific capability not located,NEW only after reading Part 091 prompt and passing Part 00 gate,Unassessed
+092,0% located,No Part 092 module artifacts located,Part-specific capability not located,NEW only after reading Part 092 prompt and passing Part 00 gate,Unassessed
+093,0% located,No Part 093 module artifacts located,Part-specific capability not located,NEW only after reading Part 093 prompt and passing Part 00 gate,Unassessed
+094,0% located,No Part 094 module artifacts located,Part-specific capability not located,NEW only after reading Part 094 prompt and passing Part 00 gate,Unassessed
+095,0% located,No Part 095 module artifacts located,Part-specific capability not located,NEW only after reading Part 095 prompt and passing Part 00 gate,Unassessed
+096,0% located,No report catalogue/export engine found,Part 096 reporting capability not present,NEW only after reading Part 096 prompt and passing Part 00 gate,Unassessed
+097,0% located,No Part 097 module artifacts located,Part-specific capability not located,NEW only after reading Part 097 prompt and passing Part 00 gate,Unassessed
+098,0% located,No Part 098 module artifacts located,Part-specific capability not located,NEW only after reading Part 098 prompt and passing Part 00 gate,Unassessed
+099,0% located,No Part 099 module artifacts located,Part-specific capability not located,NEW only after reading Part 099 prompt and passing Part 00 gate,Unassessed
+100,0% located,No Part 100 module artifacts located,Part-specific capability not located,NEW only after reading Part 100 prompt and passing Part 00 gate,Unassessed
+101,0% located,No Part 101 module artifacts located,Part-specific capability not located,NEW only after reading Part 101 prompt and passing Part 00 gate,Unassessed
+102,0% located,No Part 102 module artifacts located,Part-specific capability not located,NEW only after reading Part 102 prompt and passing Part 00 gate,Unassessed
+103,0% located,No Part 103 module artifacts located,Part-specific capability not located,NEW only after reading Part 103 prompt and passing Part 00 gate,Unassessed
+104,0% located,No Part 104 module artifacts located,Part-specific capability not located,NEW only after reading Part 104 prompt and passing Part 00 gate,Unassessed
+105,0% located,No Part 105 module artifacts located,Part-specific capability not located,NEW only after reading Part 105 prompt and passing Part 00 gate,Unassessed
+106,0% located,No AI/automation capability found,Permission-scoped read-only AI tools not present,NEW only after reading Part 106 prompt and passing Part 00 gate,Unassessed
+107,0% located,No AI/automation capability found,Permission-scoped read-only AI tools not present,NEW only after reading Part 107 prompt and passing Part 00 gate,Unassessed
+108,0% located,No Part 108 module artifacts located,Part-specific capability not located,NEW only after reading Part 108 prompt and passing Part 00 gate,Unassessed
+109,0% located,No Part 109 module artifacts located,Part-specific capability not located,NEW only after reading Part 109 prompt and passing Part 00 gate,Unassessed
+110,0% located,No Part 110 module artifacts located,Part-specific capability not located,NEW only after reading Part 110 prompt and passing Part 00 gate,Unassessed
+111,0% located,No Part 111 module artifacts located,Part-specific capability not located,NEW only after reading Part 111 prompt and passing Part 00 gate,Unassessed
+112,0% located,No Part 112 module artifacts located,Part-specific capability not located,NEW only after reading Part 112 prompt and passing Part 00 gate,Unassessed
+113,0% located,No Part 113 module artifacts located,Part-specific capability not located,NEW only after reading Part 113 prompt and passing Part 00 gate,Unassessed
+114,0% located,No Part 114 module artifacts located,Part-specific capability not located,NEW only after reading Part 114 prompt and passing Part 00 gate,Unassessed
+115,0% located,No Part 115 module artifacts located,Part-specific capability not located,NEW only after reading Part 115 prompt and passing Part 00 gate,Unassessed
+116,0% located,No database-backed query plan/benchmark capability,Performance/index evidence unavailable,NEW only after reading Part 116 prompt and passing Part 00 gate,Unassessed
+117,0% located,No Part 117 module artifacts located,Part-specific capability not located,NEW only after reading Part 117 prompt and passing Part 00 gate,Unassessed
+118,0% located,No Part 118 module artifacts located,Part-specific capability not located,NEW only after reading Part 118 prompt and passing Part 00 gate,Unassessed
+119,0% located,No Part 119 module artifacts located,Part-specific capability not located,NEW only after reading Part 119 prompt and passing Part 00 gate,Unassessed
+120,0% located,No Part 120 module artifacts located,Part-specific capability not located,NEW only after reading Part 120 prompt and passing Part 00 gate,Unassessed
+121,0% located,No Part 121 module artifacts located,Part-specific capability not located,NEW only after reading Part 121 prompt and passing Part 00 gate,Unassessed
+122,0% located,No Part 122 module artifacts located,Part-specific capability not located,NEW only after reading Part 122 prompt and passing Part 00 gate,Unassessed
+123,0% located,No Part 123 module artifacts located,Part-specific capability not located,NEW only after reading Part 123 prompt and passing Part 00 gate,Unassessed
+124,0% located,No Part 124 module artifacts located,Part-specific capability not located,NEW only after reading Part 124 prompt and passing Part 00 gate,Unassessed
+125,0% located,No Part 125 module artifacts located,Part-specific capability not located,NEW only after reading Part 125 prompt and passing Part 00 gate,Unassessed
+126,0% located,No Part 126 module artifacts located,Part-specific capability not located,NEW only after reading Part 126 prompt and passing Part 00 gate,Unassessed
+127,0% located,No Part 127 module artifacts located,Part-specific capability not located,NEW only after reading Part 127 prompt and passing Part 00 gate,Unassessed
+128,0% located,No Part 128 module artifacts located,Part-specific capability not located,NEW only after reading Part 128 prompt and passing Part 00 gate,Unassessed
+129,0% located,No Part 129 module artifacts located,Part-specific capability not located,NEW only after reading Part 129 prompt and passing Part 00 gate,Unassessed
+130,0% located,No Part 130 module artifacts located,Part-specific capability not located,NEW only after reading Part 130 prompt and passing Part 00 gate,Unassessed
+
+

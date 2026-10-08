@@ -1,0 +1,8 @@
+target_entity,existing_table,existing_columns_used,decision,notes
+identity.user,User,"id; email; displayName; passwordHash; status; createdAt; updatedAt",NEW,"Declared Prisma model; migration not applied/verified"
+organization.company,Company,"id; code; name; status; createdAt; updatedAt",NEW,"Declared Prisma model; migration not applied/verified"
+identity.company-membership,CompanyMembership,"companyId; userId; role; isActive; createdAt; updatedAt",NEW,"Declared Prisma model; composite primary key; migration not applied/verified"
+project.project,Project,"id; companyId; code; name; description; status; createdAt; updatedAt",NEW,"Declared Prisma model; unique companyId+code; migration not applied/verified"
+project.project-membership,ProjectMembership,"projectId; userId; role; isActive; createdAt; updatedAt",NEW,"Declared Prisma model; composite primary key; migration not applied/verified"
+identity.login-throttle,LoginThrottle,"emailKeyHash; windowStartedAt; attempts; blockedUntil; updatedAt",NEW,"Declared Prisma model used by credentials auth; migration not applied/verified"
+audit.authentication-event,AuditEvent,"id; actorId; action; entityType; entityId; details; createdAt",NEW,"Declared Prisma model; currently used for auth results only; migration not applied/verified"

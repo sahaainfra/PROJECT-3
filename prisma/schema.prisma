@@ -1,0 +1,133 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+}
+
+enum CompanyStatus {
+  ACTIVE
+  SUSPENDED
+}
+
+enum ProjectStatus {
+  ACTIVE
+  ON_HOLD
+  COMPLETED
+  ARCHIVED
+}
+
+enum CompanyRole {
+  SUPER_ADMIN
+  COMPANY_ADMIN
+  MEMBER
+}
+
+enum ProjectRole {
+  PROJECT_ADMIN
+  PROJECT_MANAGER
+  MEMBER
+}
+
+model User {
+  id                 String              @id @default(cuid())
+  email              String              @unique
+  displayName        String
+  passwordHash       String
+  status             UserStatus          @default(ACTIVE)
+  companyMemberships CompanyMembership[]
+  projectMemberships ProjectMembership[]
+  auditEvents        AuditEvent[]
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+
+  @@index([status, email])
+}
+
+model Company {
+  id          String              @id @default(cuid())
+  code        String              @unique
+  name        String
+  status      CompanyStatus       @default(ACTIVE)
+  memberships CompanyMembership[]
+  projects    Project[]
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+
+  @@index([status, name])
+}
+
+model CompanyMembership {
+  companyId String
+  userId    String
+  role      CompanyRole @default(MEMBER)
+  isActive  Boolean     @default(true)
+  company   Company     @relation(fields: [companyId], references: [id], onDelete: Restrict)
+  user      User        @relation(fields: [userId], references: [id], onDelete: Restrict)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  @@id([companyId, userId])
+  @@index([userId, isActive])
+  @@index([companyId, role, isActive])
+}
+
+model Project {
+  id          String              @id @default(cuid())
+  companyId   String
+  code        String
+  name        String
+  description String?
+  status      ProjectStatus       @default(ACTIVE)
+  company     Company             @relation(fields: [companyId], references: [id], onDelete: Restrict)
+  memberships ProjectMembership[]
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+
+  @@unique([companyId, code])
+  @@index([companyId, status, name])
+}
+
+model ProjectMembership {
+  projectId String
+  userId    String
+  role      ProjectRole @default(MEMBER)
+  isActive  Boolean     @default(true)
+  project   Project     @relation(fields: [projectId], references: [id], onDelete: Restrict)
+  user      User        @relation(fields: [userId], references: [id], onDelete: Restrict)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  @@id([projectId, userId])
+  @@index([userId, isActive])
+}
+
+model LoginThrottle {
+  emailKeyHash    String   @id
+  windowStartedAt DateTime
+  attempts        Int      @default(0)
+  blockedUntil    DateTime?
+  updatedAt       DateTime @updatedAt
+}
+
+model AuditEvent {
+  id         String   @id @default(cuid())
+  actorId    String?
+  action     String
+  entityType String
+  entityId   String?
+  details    Json?
+  actor      User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  createdAt  DateTime @default(now())
+
+  @@index([actorId, createdAt])
+  @@index([entityType, entityId, createdAt])
+  @@index([action, createdAt])
+}

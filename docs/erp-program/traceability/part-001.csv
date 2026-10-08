@@ -1,0 +1,12 @@
+req_id,description,migration,service,api_route,ui_screen,test_id,evidence_path,status
+REQ-P001-F01,Document complete system map,N/A read-only,N/A read-only,API_INVENTORY.md,UI_INVENTORY.md,N/A,EXISTING_SYSTEM_MAP.md;discovery/part-001.md,PROVISIONAL
+REQ-P001-F02,Document database ERD and entity map,N/A read-only,Prisma schema declarations,N/A,N/A,N/A,EXISTING_SYSTEM_MAP.md;DB_ENTITY_MAP.csv,BLOCKED
+REQ-P001-F03,Inventory APIs and routes,N/A read-only,Auth.js credentials provider,/api/auth/*,N/A,P001-LIVE-AUTH,API_INVENTORY.md;test-evidence/part-001/README.md,PROVISIONAL
+REQ-P001-F04,Inventory UI screens and responsiveness,N/A read-only,N/A read-only,/sign-in;/dashboard;/projects/[projectId],Sign-in;portfolio;project overview,P001-LIVE-UI,UI_INVENTORY.md;test-evidence/part-001/README.md,BLOCKED
+REQ-P001-F05,Inventory calculations with worked examples,N/A read-only,Dashboard scope counts,N/A,Dashboard summary,N/A,CALCULATION_REGISTRY.md,PROVISIONAL
+REQ-P001-F06,Record dependency map,N/A read-only,Prisma/auth/authorization edges,N/A,N/A,N/A,DEPENDENCY_MAP.md,BLOCKED
+REQ-P001-F07,Gap matrix for parts 3–130,N/A read-only,N/A,N/A,N/A,N/A,gap-matrix-parts-003-130.csv,PROVISIONAL
+REQ-P001-F08,Inventory risks and conflicts,N/A read-only,N/A,N/A,N/A,N/A,RISK_REGISTER.md;../../../CONFLICTS.md,PROVISIONAL
+REQ-P001-F09,Inventory duplicate/conflicting masters,N/A read-only,Declared Prisma models only,N/A,N/A,N/A,ITEM_LIKE_MASTERS.md;../../../CONFLICTS.md,PROVISIONAL
+REQ-P001-F10,Inventory protocol controls,N/A read-only,Current membership/auth checks,N/A,Sign-in;protected workspace,N/A,CONTROL_INVENTORY.md,BLOCKED
+REQ-P001-F11,Record item-like masters and calculation registry,N/A read-only,Declared Prisma models only,N/A,N/A,N/A,ITEM_LIKE_MASTERS.md;CALCULATION_REGISTRY.md,PROVISIONAL
