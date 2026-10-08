@@ -1,0 +1,3 @@
+{
+  "/(workspace)/projects/[projectId]/page": "app/(workspace)/projects/[projectId]/page.js"
+}

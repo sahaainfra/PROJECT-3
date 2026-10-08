@@ -1,0 +1,10 @@
+{
+  "/(workspace)/dashboard/page": "/dashboard",
+  "/(workspace)/projects/[projectId]/page": "/projects/[projectId]",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/sign-in/page": "/sign-in"
+}

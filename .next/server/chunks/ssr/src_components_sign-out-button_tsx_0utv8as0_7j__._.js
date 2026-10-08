@@ -1,0 +1,3 @@
+module.exports=[71370,a=>{"use strict";var b=a.i(87924),c=a.i(75003);let d=(0,a.i(70106).f)("LogOut",[["path",{d:"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4",key:"1uf3rs"}],["polyline",{points:"16 17 21 12 16 7",key:"1gabdz"}],["line",{x1:"21",x2:"9",y1:"12",y2:"12",key:"1uyos4"}]]);a.s(["SignOutButton",0,function(){return(0,b.jsxs)("button",{className:"icon-button sign-out-button",onClick:()=>(0,c.signOut)({callbackUrl:"/sign-in"}),type:"button",children:[(0,b.jsx)(d,{"aria-hidden":"true",size:17}),(0,b.jsx)("span",{children:"Sign out"})]})}],71370)}];
+
+//# sourceMappingURL=src_components_sign-out-button_tsx_0utv8as0_7j__._.js.map
