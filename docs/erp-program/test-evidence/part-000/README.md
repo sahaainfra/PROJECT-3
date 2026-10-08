@@ -2,23 +2,21 @@
 
 **Gate: BLOCKED / NOT PASS**  
 **Date:** 2026-10-08  
-**Scope:** current Buildwise scaffold only; documentation-only assessment.
+**Scope:** current Buildwise scaffold only; source checks and anonymous-route smoke verification. No usable database was available.
 
 ## Available local checks
 
-- `npm test`: 4 passed, 0 failed.
-- `npm run typecheck`: passed.
-- `npm run lint`: passed.
-- `npm run build`: passed; existing Next.js routes compiled.
-- Local smoke at `http://127.0.0.1:3000`: `/sign-in` rendered, `/` redirected to `/sign-in`, and `/api/auth/providers` returned the credentials-provider JSON.
-- The local app logs NextAuth warnings for missing `NEXTAUTH_URL` and `NEXTAUTH_SECRET`; no database-backed sign-in was attempted.
+- `npm run erp:regression`: passed after strict feature-flag configuration parsing and its tests were added; it runs tests, lint, typecheck, and production build. The latest run recorded 11 passing tests and 0 failures in [source-check evidence](runs/source-checks-2026-10-08T08-00-28-198Z.json), including the commit and dirty worktree paths.
+- The source regression check is not a database check and did not invoke a database tool or database-backed route.
+- Live browser smoke verification at `http://127.0.0.1:3000`: `/` redirected to `/sign-in`; `/sign-in` rendered with no horizontal overflow at 360, 820, and 1440 px; `/dashboard` redirected to `/sign-in`; and `/api/auth/providers` returned the credentials-provider JSON. The password visibility control changed its input type in the running page, and the browser reported no console errors or warnings.
+- After the latest production build, the dev preview restarted successfully. The same anonymous route checks and password visibility interaction passed with no browser console/page errors; no credentials were submitted in this verification.
+- During one browser validation interaction, the dev-server log recorded two `POST /api/auth/callback/credentials` requests. Both failed because `localhost:5432` refused the connection at the Prisma login-throttle query. No successful database connection or mutation is evidenced. The dev server was subsequently restarted only to render the anonymous sign-in preview; no further credential submission or database-backed action was performed.
 
 ## Missing required gates
 
-- `npm run erp:regression`: unavailable (`Missing script: "erp:regression"`).
-- Git baseline: workspace is not a Git repository; no production commit, branch, or tag can be confirmed.
-- Database: no project `.env` or process `DATABASE_URL`; no target database query was made.
-- Schema/data integrity, golden API/report outputs, database-backed login/workspace tests, backup/restore, and migration checks: not run.
+- Git baseline: repository is on `main` at the recorded source commit, but the worktree is dirty; no approved baseline commit or tag exists.
+- Database: no authorized database is available. Schema/data integrity, successful database-backed login/workspace tests, backup/restore, and migration checks are not run. The refused callback attempt is recorded above and in [CONFLICTS.md](../../../../CONFLICTS.md). PostgreSQL access remains deferred until the requestor provides an authorized database.
+- Golden API/report outputs are not run; no business report implementation or approved fixture set exists.
 - CI, visual regression, theme/token/navigation/icon lint, contrast, axe, permissions, and protocol matrices: not present or not run.
 - Independent technical/product review and approved Part 00 audit: pending.
 

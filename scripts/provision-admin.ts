@@ -29,47 +29,51 @@ if (!parsed.success) {
 const config = parsed.data;
 const prisma = new PrismaClient();
 
-try {
-  await prisma.$transaction(
-    async (transaction) => {
-      const existingSuperAdmin = await transaction.companyMembership.findFirst({
-        where: { role: CompanyRole.SUPER_ADMIN, isActive: true },
-        select: { userId: true },
-      });
-      if (existingSuperAdmin) {
-        throw new Error(
-          "A super administrator already exists. Use the approved user-administration workflow instead.",
-        );
-      }
+async function bootstrap() {
+  try {
+    await prisma.$transaction(
+      async (transaction) => {
+        const existingSuperAdmin = await transaction.companyMembership.findFirst({
+          where: { role: CompanyRole.SUPER_ADMIN, isActive: true },
+          select: { userId: true },
+        });
+        if (existingSuperAdmin) {
+          throw new Error(
+            "A super administrator already exists. Use the approved user-administration workflow instead.",
+          );
+        }
 
-      const passwordHash = await bcrypt.hash(config.ERP_ADMIN_PASSWORD, 12);
-      const user = await transaction.user.create({
-        data: {
-          email: config.ERP_ADMIN_EMAIL.toLowerCase(),
-          displayName: config.ERP_ADMIN_NAME,
-          passwordHash,
-        },
-        select: { id: true },
-      });
-      const company = await transaction.company.create({
-        data: {
-          code: config.ERP_COMPANY_CODE,
-          name: config.ERP_COMPANY_NAME,
-        },
-        select: { id: true },
-      });
-      await transaction.companyMembership.create({
-        data: {
-          companyId: company.id,
-          userId: user.id,
-          role: CompanyRole.SUPER_ADMIN,
-        },
-      });
-    },
-    { isolationLevel: Prisma.TransactionIsolationLevel.Serializable },
-  );
+        const passwordHash = await bcrypt.hash(config.ERP_ADMIN_PASSWORD, 12);
+        const user = await transaction.user.create({
+          data: {
+            email: config.ERP_ADMIN_EMAIL.toLowerCase(),
+            displayName: config.ERP_ADMIN_NAME,
+            passwordHash,
+          },
+          select: { id: true },
+        });
+        const company = await transaction.company.create({
+          data: {
+            code: config.ERP_COMPANY_CODE,
+            name: config.ERP_COMPANY_NAME,
+          },
+          select: { id: true },
+        });
+        await transaction.companyMembership.create({
+          data: {
+            companyId: company.id,
+            userId: user.id,
+            role: CompanyRole.SUPER_ADMIN,
+          },
+        });
+      },
+      { isolationLevel: Prisma.TransactionIsolationLevel.Serializable },
+    );
 
-  console.info("Initial administrator and company created.");
-} finally {
-  await prisma.$disconnect();
+    console.info("Initial administrator and company created.");
+  } finally {
+    await prisma.$disconnect();
+  }
 }
+
+void bootstrap();

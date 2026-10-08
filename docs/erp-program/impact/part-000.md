@@ -4,6 +4,12 @@
 **Assessment date:** 2026-10-08  
 **Scope:** documentation-only assessment of the Buildwise scaffold. No application code, database schema, or data was changed.
 
+## Implementation addendum — 2026-10-08
+
+Since the initial assessment, source-only Part 00 support has been added: a source regression runner and CI workflow, server-evaluated environment feature flags, and unit tests. The latest validation is recorded in the linked run evidence in [test-evidence](../test-evidence/part-000/README.md). These source changes do not touch Prisma schema or database records.
+
+The local anonymous preview was also checked at 360, 820, and 1440 px. Two credentials callbacks unexpectedly attempted the configured local PostgreSQL connection, which was refused; the server was stopped after the first verification session, then restarted on the user’s request for an anonymous preview. No successful DB connection or mutation is evidenced. The user directed that work remain source-only until an authorized database is provided. This addendum does not supersede the blocked status or formal Part 00 gates.
+
 | MI-36 question | Finding / impact |
 |---|---|
 | Master data used | Source declares `Company` and `Project`, plus membership models. Their deployment and data are not verified. No construction-domain masters were found; see `ITEM_LIKE_MASTERS.md`. |

@@ -4,11 +4,23 @@
 **Assessment date:** 2026-10-08  
 **Scope:** checked-in Buildwise scaffold in `PROJECT-3`; source-only assessment. This workspace was previously identified as a new-project scaffold, not as the authoritative live Construction ERP. No production database, data, report, or deployment was accessed.
 
+## Implementation addendum — 2026-10-08
+
+The initial inventory below predates the approved new-project re-scope and the Part 00 source-only implementation. Its statements that Git metadata, regression tooling, and feature flags are absent describe that initial inspection, not the current tree. Current state:
+
+- The repository is Git-managed on `main` at `55a9e82e30124324527be1e0509bb497cb8eec65`, with uncommitted changes; it is not an approved production baseline.
+- `npm run erp:regression` and a GitHub Actions source-regression workflow now exist. The runner covers unit tests, lint, typecheck, and build; it is not a database/browser/security/backup gate.
+- Feature flags `ff.pgm` and `ff.preview` are evaluated server-side from `ERP_FEATURE_FLAGS_JSON`; missing flags default off, malformed/unsupported configuration is rejected, scope matching is conjunctive, and the helper is not authorization. There is no admin UI or application rollout call site.
+- The anonymous sign-in, protected-route redirect, provider discovery, and responsive sign-in page were checked locally. A credentials callback also attempted `localhost:5432` and failed because the database was unavailable; the app was stopped afterward. No successful DB connection or mutation is evidenced.
+- The Part 00 implementation remains provisional. Theme bridge, token package, navigation/icon registries, authenticated route checks, and formal approvals remain incomplete. PostgreSQL remains off-limits until an authorized database is provided.
+
 ## Evidence boundary
 
 The source tree and available program documentation were inspected. The Prisma schema and checked-in migration are declarations only: without an identified database connection, they do not establish which objects exist in a deployed database. There is no Git repository metadata, configured `.env`, process `DATABASE_URL`, or `erp:regression` script in this workspace. No database access, backup, restore, or production comparison was attempted.
 
 ## REUSE / EXTEND / NEW inventory
+
+The following table preserves the initial discovery snapshot. Use the implementation addendum above for the current state of items that have since changed.
 
 | Requirement / candidate | Existing evidence | Decision | Finding / risk |
 |---|---|---|---|

@@ -1,0 +1,42 @@
+{
+  "part": "000",
+  "startedAt": "2026-10-08T07:26:25.227Z",
+  "completedAt": "2026-10-08T07:26:52.015Z",
+  "commit": "55a9e82e30124324527be1e0509bb497cb8eec65",
+  "scope": "Source checks only; this is not the complete Part 00 approval gate.",
+  "checks": [
+    {
+      "name": "unit tests",
+      "exitCode": 0,
+      "durationMs": 1205,
+      "status": "PASS"
+    },
+    {
+      "name": "lint",
+      "exitCode": 0,
+      "durationMs": 5314,
+      "status": "PASS"
+    },
+    {
+      "name": "typecheck",
+      "exitCode": 0,
+      "durationMs": 5114,
+      "status": "PASS"
+    },
+    {
+      "name": "production build",
+      "exitCode": 0,
+      "durationMs": 15070,
+      "status": "PASS"
+    }
+  ],
+  "notRun": [
+    "Database schema/data checksum comparison",
+    "Database backup and restore rehearsal",
+    "Browser end-to-end and authorization tests",
+    "Business report/export golden comparison",
+    "Part 03 quality-gate revalidation",
+    "Technical-lead and independent-review approval"
+  ],
+  "status": "PASS"
+}

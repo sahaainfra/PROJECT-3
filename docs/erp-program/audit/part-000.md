@@ -3,10 +3,19 @@
 **Status: BLOCKED / NOT APPROVED**  
 **Assessment date:** 2026-10-08  
 **Assessor:** implementation session; not independent  
-**Commit / pipeline:** unavailable — workspace has no Git metadata or CI pipeline  
+**Commit / pipeline:** source commit `55a9e82e30124324527be1e0509bb497cb8eec65`; source-regression workflow added, GitHub run not verified
 **Scope:** provisional source-level assessment only.
 
 This document records readiness gaps for transparency. It is **not** the completed internal audit required by Part 00, is not an independent review, and is not signed by a product owner or technical lead.
+
+## Source-only implementation addendum — 2026-10-08
+
+The findings below describe the state before the current source-only Part 00 work and should be read with these updates:
+
+- A local source regression command and GitHub Actions workflow are now present. The latest run evidence is linked from [the evidence README](../test-evidence/part-000/README.md); no GitHub workflow execution is asserted.
+- Feature-flag evaluation/configuration helpers and unit tests are now present. They do not provide authorization or a user-admin toggle, and no application route is gated by them.
+- Anonymous route and responsive sign-in smoke checks passed locally. Database-backed authentication did not pass: two requests encountered a refused `localhost:5432` connection. See [CONFLICTS.md](../../../CONFLICTS.md). Do not retry database access without authorization.
+- Part 00 remains **BLOCKED / NOT APPROVED**. Database integrity, restore, authenticated browser, design gates, independent review, and sign-offs are not complete.
 
 | Dimension | Result | Evidence / blocker |
 |---|---|---|
