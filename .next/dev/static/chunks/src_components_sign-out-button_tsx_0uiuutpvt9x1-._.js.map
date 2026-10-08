@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Documents/GitHub/PROJECT-3/src/components/sign-out-button.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { signOut } from \"next-auth/react\";\r\nimport { LogOut } from \"lucide-react\";\r\n\r\nexport function SignOutButton() {\r\n  return (\r\n    <button\r\n      className=\"icon-button sign-out-button\"\r\n      onClick={() => signOut({ callbackUrl: \"/sign-in\" })}\r\n      type=\"button\"\r\n    >\r\n      <LogOut aria-hidden=\"true\" size={17} />\r\n      <span>Sign out</span>\r\n    </button>\r\n  );\r\n}\r\n"],"names":["SignOutButton","className","onClick","callbackUrl","type","size"],"mappings":";;;;;AAEA;AACA;AAHA;;;;AAKO,SAASA;IACd,qBACE,6LAAC;QACCC,WAAU;QACVC,SAAS,IAAM,IAAA,4JAAO,EAAC;gBAAEC,aAAa;YAAW;QACjDC,MAAK;;0BAEL,6LAAC,uNAAM;gBAAC,eAAY;gBAAOC,MAAM;;;;;;0BACjC,6LAAC;0BAAK;;;;;;;;;;;;AAGZ;KAXgBL"}}]
-}
