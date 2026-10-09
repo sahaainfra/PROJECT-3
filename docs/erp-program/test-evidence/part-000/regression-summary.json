@@ -1,0 +1,42 @@
+{
+  "part": "000",
+  "at": "2026-10-09T00:00:39.456Z",
+  "git_commit": null,
+  "total": 4,
+  "passed": 2,
+  "failed": 2,
+  "results": [
+    {
+      "name": "unit+design tests (vitest)",
+      "command": "npm.cmd run test -- --reporter=basic",
+      "status": "FAIL",
+      "exit_code": null,
+      "output": "",
+      "at": "2026-10-09T00:00:38.880Z"
+    },
+    {
+      "name": "design lint (DS-33)",
+      "command": "node scripts/erp-program/lint-design.mjs",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": "=== erp:lint-design ===\n  ok   token: 3 themes, 27 semantic colour tokens, 3 densities\n  ok   contrast: 21/21 pairs pass WCAG minima\n  ok   nav: 1 groups, 1 entries, all icon keys resolvable\n  ok   icon: no direct glyph imports found in src/\nlint-design: PASS",
+      "at": "2026-10-09T00:00:39.123Z"
+    },
+    {
+      "name": "db integrity check (CP-PGM-02)",
+      "command": "node scripts/erp-program/db_integrity_check.mjs",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": "",
+      "at": "2026-10-09T00:00:39.454Z"
+    },
+    {
+      "name": "typecheck",
+      "command": "npm.cmd run typecheck",
+      "status": "FAIL",
+      "exit_code": null,
+      "output": "",
+      "at": "2026-10-09T00:00:39.456Z"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "program": "Integrated Construction ERP",
+    "part": "00",
+    "standard": "17_ENTERPRISE_DESIGN_SYSTEM.md (DS-13, DS-14)",
+    "version": "1.0.0",
+    "note": "Entries render only when their feature flag is ON, the user is authorised and the route is live. No empty groups; no coming-soon entries. Forbidden terms fail lint-design."
+  },
+  "groups": [
+    {
+      "id": "home",
+      "label_key": "nav.group.home",
+      "icon_key": "erp.home.pgm",
+      "sort_order": 0,
+      "entries": [
+        {
+          "id": "erp.home.pgm",
+          "owner_part": "00",
+          "label_key": "nav.home.launchpad",
+          "icon_key": "erp.home.pgm",
+          "route": "/",
+          "surface": "global",
+          "permission_key": null,
+          "feature_flag": "ff.pgm",
+          "sort_order": 0,
+          "badge_source": null,
+          "keywords": "home launchpad start overview erp",
+          "is_active": true
+        }
+      ]
+    }
+  ],
+  "forbidden_terms": ["coming soon", "coming-soon", "todo", "fixme", "draft", "sample data", "lorem", "placeholder", "wip", "internal test", "debug", "console", "test page"]
+}

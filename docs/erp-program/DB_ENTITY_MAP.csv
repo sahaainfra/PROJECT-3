@@ -1,0 +1,4 @@
+target_entity,existing_table,existing_columns_used,decision,notes
+sys_feature_flags,sys_feature_flags,key,enabled,scope_type,rollout_percent,owner_prompt,REUSE,Part 00 migration table; no changes needed
+ui_user_preferences,ui_user_preferences,theme,density,locale,number_format,date_format,default_company_id,default_project_id,default_site_id,landing_route,REUSE,Part 00 migration table; no changes needed
+,(none),(none),(none),NEW,All other ERP modules (projects, GRNs, attendance, payroll, etc.) to be added in future Parts; will EXTEND or NEW per SA-4 conventions; names follow existing convention from SA-4 (standard columns, decimal types, UTC timestamps, soft delete, source references, central masters)

@@ -1,0 +1,55 @@
+{
+  "captured_at": "2026-10-09T00:00:00.000Z",
+  "git_commit": null,
+  "schema": {
+    "tables": [
+      { "name": "sys_feature_flags", "kind": "table" },
+      { "name": "ui_user_preferences", "kind": "table" }
+    ],
+    "views": [],
+    "sequences": [],
+    "columns": [
+      { "table_name": "sys_feature_flags", "column_name": "id", "data_type": "bigint", "is_nullable": "NO", "column_default": "nextval('sys_feature_flags_id_seq'::regclass)" },
+      { "table_name": "sys_feature_flags", "column_name": "key", "data_type": "text", "is_nullable": "NO", "column_default": null },
+      { "table_name": "sys_feature_flags", "column_name": "description", "data_type": "text", "is_nullable": "YES", "column_default": null },
+      { "table_name": "sys_feature_flags", "column_name": "scope_type", "data_type": "text", "is_nullable": "NO", "column_default": "'global'" },
+      { "table_name": "sys_feature_flags", "column_name": "scope_id", "data_type": "text", "is_nullable": "YES", "column_default": null },
+      { "table_name": "sys_feature_flags", "column_name": "enabled", "data_type": "boolean", "is_nullable": "NO", "column_default": "false" },
+      { "table_name": "sys_feature_flags", "column_name": "rollout_percent", "data_type": "integer", "is_nullable": "NO", "column_default": "0" },
+      { "table_name": "sys_feature_flags", "column_name": "owner_prompt", "data_type": "text", "is_nullable": "NO", "column_default": "'part-000'" },
+      { "table_name": "sys_feature_flags", "column_name": "created_at", "data_type": "timestamptz", "is_nullable": "NO", "column_default": "now()" },
+      { "table_name": "sys_feature_flags", "column_name": "updated_at", "data_type": "timestamptz", "is_nullable": "NO", "column_default": "now()" },
+      { "table_name": "ui_user_preferences", "column_name": "user_id", "data_type": "text", "is_nullable": "NO", "column_default": null },
+      { "table_name": "ui_user_preferences", "column_name": "theme", "data_type": "text", "is_nullable": "NO", "column_default": "'light'" },
+      { "table_name": "ui_user_preferences", "column_name": "density", "data_type": "text", "is_nullable": "NO", "column_default": "'cozy'" },
+      { "table_name": "ui_user_preferences", "column_name": "locale", "data_type": "text", "is_nullable": "NO", "column_default": "'en'" },
+      { "table_name": "ui_user_preferences", "column_name": "number_format", "data_type": "text", "is_nullable": "YES", "column_default": null },
+      { "table_name": "ui_user_preferences", "column_name": "date_format", "data_type": "text", "is_nullable": "YES", "column_default": null },
+      { "table_name": "ui_user_preferences", "column_name": "default_company_id", "data_type": "text", "is_nullable": "YES", "column_default": null },
+      { "table_name": "ui_user_preferences", "column_name": "default_project_id", "data_type": "text", "is_nullable": "YES", "column_default": null },
+      { "table_name": "ui_user_preferences", "column_name": "default_site_id", "data_type": "text", "is_nullable": "YES", "column_default": null },
+      { "table_name": "ui_user_preferences", "column_name": "landing_route", "data_type": "text", "is_nullable": "YES", "column_default": null },
+      { "table_name": "ui_user_preferences", "column_name": "updated_at", "data_type": "timestamptz", "is_nullable": "NO", "column_default": "now()" }
+    ],
+    "constraints": [
+      { "name": "uq_sys_feature_flags_scope", "type": "unique", "table_name": "sys_feature_flags", "definition": "UNIQUE (key, scope_type, scope_id)" },
+      { "name": "sys_feature_flags_pkey", "type": "primary key", "table_name": "sys_feature_flags", "definition": "PRIMARY KEY (id)" },
+      { "name": "ui_user_preferences_pkey", "type": "primary key", "table_name": "ui_user_preferences", "definition": "PRIMARY KEY (user_id)" },
+      { "name": "ck_ui_user_preferences_theme", "type": "check", "table_name": "ui_user_preferences", "definition": "CHECK (theme IN ('light', 'dark', 'high-contrast'))" },
+      { "name": "ck_ui_user_preferences_density", "type": "check", "table_name": "ui_user_preferences", "definition": "CHECK (density IN ('compact', 'cozy', 'touch'))" }
+    ],
+    "indexes": [
+      { "name": "ix_sys_feature_flags_key", "definition": "CREATE INDEX IF NOT EXISTS ix_sys_feature_flags_key ON sys_feature_flags (key)" }
+    ]
+  },
+  "data": {
+    "counts": {
+      "sys_feature_flags": 0,
+      "ui_user_preferences": 0
+    },
+    "checksums": {
+      "sys_feature_flags": "empty",
+      "ui_user_preferences": "empty"
+    }
+  }
+}
